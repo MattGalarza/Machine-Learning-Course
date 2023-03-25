@@ -1,1 +1,28 @@
-This folder is used to store files that are related to the final project of the course
+The rapidly growing network of physical objects embedded with sensors, software, and other technologies that collect and exchange data with over devices and 
+databases is known as the Internet of Things (IoT).  The explosion in these devices has driven the development of small, wireless power sources and has 
+become a focal point in the design of small-scale, low power devices. A particular field of interest to tackle this need is the one surrounding the microscale 
+energy harvesting technologies. Energy harvesters are small devices that operate by converting ambient energy into electrical power. Among many forms of 
+ambient energy, vibration is one that is ubiquitous and sufficient to drive energy conversion. Compared to piezoelectric and electromagnetic vibration energy 
+harvesters (VEHs), electrostatic energy harvesters (e-VEHs) are attracting more attention due to their compatibility with silicon-based technologies. Furthermore, 
+they also have an added advantage of on-chip integration with power conditioning and sensing circuitry. 
+
+The research I am currently working on is on the development of models to accurately represent the complex dynamics of such electrostatic harvesters. These 
+harvesters are modeled as a coupled two-mass system which is a highly non-linear system. As external excitation is applied to the devices, the central shuttle
+mass oscillates within the frame. The mobile electrodes attached to the shuttle vary the capacitance of the circuit with the anchored electrodes of the frame 
+and forces current through the load resistor. The work is a continuation of work in Dr. Borca-Tasciuc’s research group and I will link three publications in 
+particular from which this work is based.
+
+1.	Effectiveness of Energy Transfer versus Mixing Entropy in Coupled Mechanical–Electrical Oscillators
+2.	A predictive model for electrostatic energy harvesters with impact-based frequency up-conversion
+3.	Modeling of kinetic to electrical conversion via capacitive MEMS with switchable dielectric
+
+In the model I created, various forces are attributed to the output and the subsequent “ringing” which occurs by the oscillation of electrodes after collision. 
+The highly non-linear system means it is difficult to determine the relationship between various parameters and forces. For example, the relationship between 
+electrostatic and damping forces is important for “pull-in”, where the electrodes do not uncouple after collision because the damping force is too small. Difficult
+to determine by hand, a machine learning model would be ideal for making connections between forces and providing insight into a variety of correlations that I or
+other researchers would not be able to identify. The algorithms I would use for this data is both KNN and regression models. For large samples of data, both labeled 
+and unlabeled, KNN would be great to see how various data points may be obtained by a varying set of parameters. Furthermore, regression of scaling/fitting and 
+geometric parameters may affect frequency sweeps and output voltages. Plotting multi-dimension contour plots of voltages with respect to multiple variables may also 
+be valuable to visualize data; further providing insight into parameter relations. Overall, the amount of data that can be collected from the model, coupled with the
+highly complex and multi-variable parameters of the non-linear system is ideal for machine learning models. This is a valuable attribute machine learning models that
+analytical solutions are unable to handle. Furthermore, seaborn library is great for combining and visualizing the data.
